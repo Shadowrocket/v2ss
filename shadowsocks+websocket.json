@@ -1,0 +1,27 @@
+{
+    "log": {
+        "loglevel": "debug"
+    },
+    "inbounds": [{
+        "app": "shadowsocks/obfs.websocket",
+        "port": 8338,
+        "listen": "0.0.0.0",
+        "protocol": "shadowsocks",
+        "settings": {
+            "method": "aes-128-gcm",
+            "password": "password",
+            "ota": false,
+            "level": 0
+        },
+        "streamSettings": {
+            "network": "ws",
+            "wsSettings": {
+                "path": "/ws"
+            }
+        }
+    }],
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {}
+    }
+}

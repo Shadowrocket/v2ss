@@ -1,0 +1,21 @@
+{
+    "log": {
+        "loglevel": "debug"
+    },
+    "inbounds": [{
+        "app": "shadowsocks/obfs.none",
+        "port": 8335,
+        "listen": "0.0.0.0",
+        "protocol": "shadowsocks",
+        "settings": {
+            "method": "aes-128-gcm",
+            "password": "password",
+            "ota": false,
+            "level": 0
+        }
+    }],
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {}
+    }
+}

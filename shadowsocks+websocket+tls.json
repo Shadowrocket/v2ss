@@ -1,0 +1,37 @@
+{
+    "log": {
+        "loglevel": "debug"
+    },
+    "inbounds": [{
+        "app": "shadowsocks/obfs.wss",
+        "port": 8337,
+        "listen": "0.0.0.0",
+        "protocol": "shadowsocks",
+        "settings": {
+            "method": "aes-128-gcm",
+            "password": "password",
+            "ota": false,
+            "level": 0
+        },
+        "streamSettings": {
+            "security": "tls",
+            "network": "ws",
+            "wsSettings": {
+                "connectionReuse": true,
+                "host": "v2ray.me",
+                "path": "/ws"
+            },
+            "tlsSettings": {
+                "certificates": [{
+                    "certificateFile": "v2ray.me.crt",
+                    "keyFile": "v2ray.me.key",
+                    "allowInsecure": true
+                }]
+            }
+        }
+    }],
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {}
+    }
+}
